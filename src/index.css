@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-[Poppins] scroll-smooth;
+}
+
+/* optional helpers you had in the HTML */
+.hero-gradient {
+  @apply bg-[linear-gradient(135deg,rgba(255,140,66,.1)_0%,rgba(255,209,102,.1)_100%)];
+}
+.card-hover {
+  @apply transition-all hover:-translate-y-1 hover:shadow-xl;
+}
