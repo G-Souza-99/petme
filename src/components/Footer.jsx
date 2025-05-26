@@ -52,13 +52,13 @@ export function Footer() {
               <li className="flex items-center">
                 <i className="fas fa-envelope mr-2 text-petmeOrange" /> hello@petme.com
               </li>
-              <li className="flex items-center">
+              {/* <li className="flex items-center">
                 <i className="fas fa-phone mr-2 text-petmeOrange" /> (123) 456-7890
               </li>
               <li className="flex items-start">
                 <i className="fas fa-map-marker-alt mr-2 mt-1 text-petmeOrange" /> 123 Pet Street
                 <br />Animal City, PC 12345
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
