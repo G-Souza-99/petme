@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { faComments, faGraduationCap, faCalendarAlt as faCalAlt } from "@fortawesome/free-solid-svg-icons";
 import { Fa } from "./Fa";
+
 function CommunityCard({ icon, title, children }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 card-hover transition-all text-center">
@@ -15,6 +17,8 @@ function CommunityCard({ icon, title, children }) {
 }
 
 export function CommunitySection() {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <section id="community" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,7 +53,9 @@ export function CommunitySection() {
             </p>
             <a
               href="#join"
-              className="bg-white text-petmeOrange px-8 py-3 rounded-md text-lg font-bold hover:bg-opacity-90 transition-all inline-block"
+              className={`group ${isHovered ? 'bg-petmeGold' : 'bg-white'} text-petmeOrange px-8 py-3 rounded-md text-lg font-bold hover:bg-white/90 hover:-translate-y-0.5 hover:shadow-lg`}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
             >
               Get Started
             </a>

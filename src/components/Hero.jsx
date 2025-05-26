@@ -1,5 +1,6 @@
 import { Fa } from "./Fa";
 import { faHeart, faHome } from "@fortawesome/free-solid-svg-icons";
+import { Button } from "./Button";
 
 export function Hero() {
   return (
@@ -16,18 +17,12 @@ export function Hero() {
               healthy pet families. Join our community of passionate pet lovers today!
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <a
-                href="#join"
-                className="bg-petmeOrange text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-opacity-90 transition-all text-center"
-              >
+              <Button href="#join" variant="primary">
                 Join Our Community
-              </a>
-              <a
-                href="#mission"
-                className="border-2 border-petmeOrange text-petmeOrange px-6 py-3 rounded-md text-lg font-medium hover:bg-petmeLight transition-all text-center"
-              >
+              </Button>
+              <Button href="#mission" variant="secondary">
                 Learn More
-              </a>
+              </Button>
             </div>
           </div>
 

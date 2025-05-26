@@ -8,7 +8,35 @@ body {
   @apply font-[Poppins] scroll-smooth;
 }
 
-/* optional helpers you had in the HTML */
+/* Base cursor styles */
+* {
+  cursor: default;
+}
+
+/* Interactive elements */
+a, button, [role="button"], input, textarea, select, label[for] {
+  cursor: pointer;
+}
+
+/* Text selection - prevent cursor change */
+::selection {
+  cursor: default;
+}
+
+/* Community Card Specific Icon Hover */
+.card-hover:hover .text-petmeOrange {
+  @apply text-petmeGold transition-colors duration-200;
+}
+
+/* Global text hover states (unchanged) */
+.text-petmeOrange {
+  @apply transition-colors duration-200;
+}
+.text-petmeOrange:hover {
+  @apply text-[#FFB347];
+}
+
+/* optional helpers */
 .hero-gradient {
   @apply bg-[linear-gradient(135deg,rgba(255,140,66,.1)_0%,rgba(255,209,102,.1)_100%)];
 }
